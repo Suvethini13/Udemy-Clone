@@ -84,14 +84,20 @@ body{
 .categories p{
     background-color: blueviolet;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 30px;
     color: white;
-    border-bottom: solid black 2px;
+    cursor: pointer;
+    border: blueviolet 2px solid;
+
 
 }
 
 .categories p:hover{
-    background-color: violet;
+    background-color: transparent;
+    color: black;
+    transition: 1s;
+    border: blueviolet 1px solid;
+
 }
 
 .sale-image{
@@ -113,7 +119,22 @@ body{
     top: 120px;
     left: 225px;
     padding: 20px;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 
+}
+
+@keyframes zoom{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .recommended{
